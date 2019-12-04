@@ -1,6 +1,6 @@
 {
   "name": "stocks",
-  "homepage": "http://emilyzwang.github.io/StockAssistantp",
+  "homepage": "http://emilyzwang.github.io/StockAssistant",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
