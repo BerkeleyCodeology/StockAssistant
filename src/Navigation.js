@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -10,18 +10,18 @@ export default class Navigation extends React.Component {
     return(
       <div>
           <div class="ui menu">
-            <a class="active item" href = "/">
+            <Link class="active item" to="/">
               Game
-            </a>
-            <a class="item" href = "/Movers">
+            </Link>
+            <Link class="item" to="/Movers">
               Movers
-            </a>
-            <a class="item" href = "/Watchlist">
+            </Link>
+            <Link class="item" to="/Watchlist">
               Watchlist
-            </a>
-            <a class="item" href = "/News">
+            </Link>
+             <Link class="item" to="/News">
               News
-            </a>
+            </Link>
         </div>
 
       </div>
