@@ -1,5 +1,6 @@
 import React from 'react';
 import Chart from 'chart.js';
+var myChart = null
 
 export default class Game extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ export default class Game extends React.Component {
       endPrice: 0,
       prices: [],
       days: [],
-      chart: undefined
+      chart: null
     }
   }
 
@@ -102,10 +103,13 @@ export default class Game extends React.Component {
     // update balance
     this.restart();
   }
+
   initializeChart() {
     var ctx = document.getElementById('myChart');
-
-    var myChart = new Chart(ctx, {
+    if(myChart!=null){
+       myChart.destroy();
+   }
+    myChart = new Chart(ctx, {
             type: 'line',
             data: {
                 labels: this.state.days,
@@ -168,7 +172,6 @@ export default class Game extends React.Component {
                 }]
             },
             options: {
-              events: [],
                 scales: {
                     yAxes: [{
                         ticks: {
