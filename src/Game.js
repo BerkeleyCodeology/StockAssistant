@@ -20,6 +20,7 @@ export default class Game extends React.Component {
       endPrice: 0,
       prices: [],
       days: [],
+      chart: undefined
     }
   }
 
@@ -101,10 +102,10 @@ export default class Game extends React.Component {
     // update balance
     this.restart();
   }
-
   initializeChart() {
     var ctx = document.getElementById('myChart');
-        var myChart = new Chart(ctx, {
+
+    var myChart = new Chart(ctx, {
             type: 'line',
             data: {
                 labels: this.state.days,
@@ -167,6 +168,7 @@ export default class Game extends React.Component {
                 }]
             },
             options: {
+              events: [],
                 scales: {
                     yAxes: [{
                         ticks: {
