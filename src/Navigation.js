@@ -10,16 +10,16 @@ export default class Navigation extends React.Component {
     return(
       <div>
           <div class="ui menu">
-            <Link class="active item" to="/">
+            <Link class="active item" to="/StockAssistant/">
               Game
             </Link>
-            <Link class="item" to="/Movers">
+            <Link class="item" to="/StockAssistant/Movers">
               Movers
             </Link>
-            <Link class="item" to="/Watchlist">
+            <Link class="item" to="/StockAssistant/Watchlist">
               Watchlist
             </Link>
-             <Link class="item" to="/News">
+             <Link class="item" to="/StockAssistant/News">
               News
             </Link>
         </div>

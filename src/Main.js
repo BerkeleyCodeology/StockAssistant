@@ -8,10 +8,10 @@ import Watchlist from './Watchlist.js';
 export default function Main() {
   return(
     <Switch>
-      <Route exact path='/' component={Game}></Route>
-      <Route path='/Movers' component={TablePage}></Route>
-      <Route path='/News' component={News}></Route>
-      <Route path='/Watchlist' component={Watchlist}></Route>
+      <Route exact path='/StockAssistant/' component={Game}></Route>
+      <Route path='/StockAssistant/Movers' component={TablePage}></Route>
+      <Route path='/StockAssistant/News' component={News}></Route>
+      <Route path='/StockAssistant/Watchlist' component={Watchlist}></Route>
     </Switch>
   )
 }
